@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>PDF 번역기</title>
+  </head>
+  <body>
+    <h1>PDF 업로드 후 자동 번역</h1>
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".pdf" required>
+      <button type="submit">업로드 및 번역</button>
+    </form>
+
+    {% if translated_text %}
+      <h2>번역 결과:</h2>
+      <div style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px;">
+        {{ translated_text }}
+      </div>
+    {% endif %}
+  </body>
+</html>
+
